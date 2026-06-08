@@ -1,49 +1,53 @@
-// Script para interações do site Agenda Glow Up
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Smooth scroll para links internos
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
+/* 
+   AGENDA GLOW UP - SCRIPT PURO
+   Funcionalidades: Reveal on Scroll, FAQ Accordion
+*/
 
-    // 2. Efeito de scroll no header (transparência)
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.padding = '0.8rem 8%';
-            header.style.backgroundColor = 'rgba(26, 26, 26, 0.98)';
-        } else {
-            header.style.padding = '1.2rem 8%';
-            header.style.backgroundColor = 'var(--dark-bg)';
+// REVEAL ON SCROLL - Animação de entrada dos elementos
+function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
         }
     });
+}
 
-    // 3. Funcionalidade do FAQ (Acordeão)
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            // Fecha outros itens abertos
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
-            // Alterna o item atual
-            item.classList.toggle('active');
+// Executar ao carregar a página
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+// FAQ ACCORDION - Expandir e retrair perguntas
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        
+        // Fechar todos os outros itens
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) {
+                item.classList.remove('active');
+            }
         });
+        
+        // Alternar o item atual
+        faqItem.classList.toggle('active');
     });
 });
+
+// SMOOTH SCROLL - Rolagem suave para links internos
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+console.log('✨ Agenda Glow Up - Script carregado com sucesso!');

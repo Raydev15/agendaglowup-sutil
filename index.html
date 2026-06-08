@@ -3,75 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda Glow Up | Estética Delicada</title>
+    <title>Agenda Glow Up | Estética Profissional</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome para ícones profissionais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
         <div class="logo">Agenda <span>Glow Up</span></div>
-        <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
     </header>
 
     <main>
-        <!-- HERO SECTION (FIEL À IMAGEM) -->
+        <!-- HERO SECTION -->
         <section id="inicio" class="hero">
             <h1>Beleza que <span>transforma</span></h1>
             <p>Agende seus serviços de estética com facilidade. Cabelo, unhas, sobrancelha e muito mais.</p>
             <div class="hero-btns">
-                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um horário no Agenda Glow Up." class="btn-pink" target="_blank">Agendar Agora</a>
-                <a href="#servicos" class="btn-outline">Ver Serviços</a>
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um horário no Agenda Glow Up." class="btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar Agora
+                </a>
+                <a href="#servicos" class="btn-secondary">Ver Serviços</a>
             </div>
         </section>
 
-        <!-- COMO FUNCIONA (FIEL À IMAGEM) -->
-        <section class="how-it-works">
-            <h2>Como <span>funciona?</span></h2>
-            <p>Agendar nunca foi tão simples</p>
+        <!-- COMO FUNCIONA -->
+        <section class="how-it-works reveal">
+            <h2 class="section-title">Como <span>funciona?</span></h2>
+            <p class="section-subtitle">Agendar nunca foi tão simples</p>
         </section>
 
         <!-- SERVIÇOS -->
-        <section id="servicos">
+        <section id="servicos" class="reveal">
+            <h2 class="section-title">Nossos <span>Serviços</span></h2>
+            <p class="section-subtitle">Conheça os principais serviços disponíveis</p>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal">
                     <i class="fas fa-scissors"></i>
                     <h3>Cabelo</h3>
                     <p>Cortes modernos, coloração e tratamentos capilares especializados.</p>
                     <span class="price">R$ 45,00</span>
-                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar o serviço de Cabelo." class="btn-pink" target="_blank">Agendar</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar o serviço de Cabelo." class="btn-primary" target="_blank">Agendar</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <i class="fas fa-hand-sparkles"></i>
                     <h3>Unhas</h3>
                     <p>Manicure, pedicure e alongamentos com acabamento impecável.</p>
                     <span class="price">R$ 35,00</span>
-                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar o serviço de Unhas." class="btn-pink" target="_blank">Agendar</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar o serviço de Unhas." class="btn-primary" target="_blank">Agendar</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <i class="fas fa-eye"></i>
                     <h3>Sobrancelha</h3>
                     <p>Design estratégico e henna para realçar seu olhar.</p>
                     <span class="price">R$ 30,00</span>
-                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar o serviço de Sobrancelha." class="btn-pink" target="_blank">Agendar</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar o serviço de Sobrancelha." class="btn-primary" target="_blank">Agendar</a>
+                </div>
+                <div class="service-card reveal">
+                    <i class="fas fa-face-smile"></i>
+                    <h3>Limpeza de Pele</h3>
+                    <p>Tratamento profundo para uma pele radiante e saudável.</p>
+                    <span class="price">R$ 80,00</span>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Limpeza de Pele." class="btn-primary" target="_blank">Agendar</a>
+                </div>
+                <div class="service-card reveal">
+                    <i class="fas fa-spa"></i>
+                    <h3>Massagem</h3>
+                    <p>Relaxamento completo e alívio de tensões do dia a dia.</p>
+                    <span class="price">R$ 100,00</span>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Massagem Relaxante." class="btn-primary" target="_blank">Agendar</a>
+                </div>
+                <div class="service-card reveal">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    <h3>Maquiagem</h3>
+                    <p>Produção completa para eventos e ocasiões especiais.</p>
+                    <span class="price">R$ 120,00</span>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma Maquiagem." class="btn-primary" target="_blank">Agendar</a>
                 </div>
             </div>
         </section>
 
-        <!-- POLÍTICA DE CANCELAMENTO -->
-        <section id="cancelamento" style="background-color: #fff; padding: 5rem 10%; text-align: center;">
-            <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Política de <span>Cancelamento</span></h2>
-            <div style="max-width: 700px; margin: 0 auto; color: #666;">
-                <p>Para garantir o melhor atendimento a todas as nossas clientes, pedimos que cancelamentos ou reagendamentos sejam feitos com no mínimo <strong>2 horas de antecedência</strong> via WhatsApp.</p>
+        <!-- FEEDBACKS -->
+        <section id="feedbacks" class="reveal">
+            <h2 class="section-title">Avaliações de <span>Clientes</span></h2>
+            <p class="section-subtitle">Veja o que nossos clientes dizem</p>
+            <div class="feedbacks-grid">
+                <div class="feedback-card reveal">
+                    <p>"Atendimento maravilhoso e ambiente super tranquilo. Adorei o resultado!"</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <strong>Ana Paula</strong>
+                </div>
+                <div class="feedback-card reveal">
+                    <p>"As unhas ficaram perfeitas. O agendamento pelo zap é muito rápido."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <strong>Juliana M.</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="reveal">
+            <h2 class="section-title">Dúvidas <span>Frequentes</span></h2>
+            <p class="section-subtitle">Tire suas dúvidas</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como agendar?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Basta clicar no botão "Agendar" do serviço desejado e você será redirecionada para o nosso WhatsApp.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quais as formas de pagamento?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Aceitamos Pix, cartões de crédito/débito e dinheiro.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como cancelo meu agendamento?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Cancelamentos podem ser feitos com 2 horas de antecedência via WhatsApp sem nenhuma taxa.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO E INFO -->
+        <section id="contato" class="reveal">
+            <h2 class="section-title">Entre em <span>Contato</span></h2>
+            <p class="section-subtitle">Estamos aqui para atendê-la</p>
+            <div class="info-container">
+                <div class="info-box">
+                    <h3><i class="fas fa-clock"></i> Horários</h3>
+                    <ul>
+                        <li><span>Seg - Sex</span> <span>09:00 - 19:00</span></li>
+                        <li><span>Sábado</span> <span>09:00 - 17:00</span></li>
+                        <li><span>Domingo</span> <span>Fechado</span></li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h3><i class="fas fa-location-dot"></i> Endereço</h3>
+                    <ul>
+                        <li><span>Rua das Flores, 123</span></li>
+                        <li><span>Centro - São Paulo - SP</span></li>
+                        <li><span style="margin-top: 10px; font-weight: 600;">(11) 99999-9999</span></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-logo">Agenda <span>Glow Up</span></div>
+        <div class="social-links">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5511999999999" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
         <div class="copyright">&copy; 2026 Agenda Glow Up. Todos os direitos reservados.</div>
     </footer>
 
